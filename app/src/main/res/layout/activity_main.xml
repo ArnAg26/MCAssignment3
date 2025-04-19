@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:paddingBottom="24dp">
+
+        <!-- Matrix A dimensions -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Matrix A Dimensions"
+            android:textStyle="bold"
+            android:layout_marginTop="12dp" />
+
+        <EditText
+            android:id="@+id/rowsA"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Rows (A)"
+            android:inputType="number"
+            android:layout_marginTop="4dp"
+            android:padding="8dp"
+            android:background="@android:drawable/editbox_background" />
+
+        <EditText
+            android:id="@+id/colsA"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Columns (A)"
+            android:inputType="number"
+            android:layout_marginTop="4dp"
+            android:padding="8dp"
+            android:background="@android:drawable/editbox_background" />
+
+        <!-- Matrix B dimensions -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Matrix B Dimensions"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp" />
+
+        <EditText
+            android:id="@+id/rowsB"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Rows (B)"
+            android:inputType="number"
+            android:layout_marginTop="4dp"
+            android:padding="8dp"
+            android:background="@android:drawable/editbox_background" />
+
+        <EditText
+            android:id="@+id/colsB"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Columns (B)"
+            android:inputType="number"
+            android:layout_marginTop="4dp"
+            android:padding="8dp"
+            android:background="@android:drawable/editbox_background" />
+
+        <!-- Button to generate matrix input fields dynamically -->
+        <Button
+            android:id="@+id/generateMatricesBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Enter Matrix Values"
+            android:layout_marginTop="16dp" />
+
+        <!-- Placeholder for dynamic matrix inputs -->
+        <LinearLayout
+            android:id="@+id/matrixInputsContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="12dp" />
+
+        <!-- Operation selection -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select Operation"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp" />
+
+        <RadioGroup
+            android:id="@+id/operationGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="8dp">
+
+            <RadioButton
+                android:id="@+id/addRadio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Add" />
+
+            <RadioButton
+                android:id="@+id/subtractRadio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Subtract" />
+
+            <RadioButton
+                android:id="@+id/multiplyRadio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Multiply" />
+
+            <RadioButton
+                android:id="@+id/divideRadio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Divide" />
+        </RadioGroup>
+
+        <!-- Button to perform the operation -->
+        <Button
+            android:id="@+id/calculateBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Calculate"
+            android:layout_marginTop="16dp" />
+
+        <!-- Output -->
+        <TextView
+            android:id="@+id/resultLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Result:"
+            android:textStyle="bold"
+            android:layout_marginTop="24dp" />
+
+        <TextView
+            android:id="@+id/resultTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            android:padding="12dp"
+            android:background="#f0f0f0"
+            android:minHeight="60dp"
+            android:layout_marginTop="8dp" />
+    </LinearLayout>
+</ScrollView>
